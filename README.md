@@ -16,8 +16,9 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 Available Constructs under cdk-stack
 
-1. S3Import - To import the existing S3 & to deploy the assets
-2. StaticWebAppConstruct - Hosts s3 assets in cloudfront.
-3. LambdaFnConstruct - Simple Lambda with handler
+1. LambdaFnConstruct - Simple Lambda with handler
+2. S3Import - To import the existing S3 & to deploy the assets
+3. StaticWebAppConstruct - Hosts s3 assets in cloudfront.
 4. TestCodePipelineStack - For running deployment through pipeline
+5. WebServerConstruct - For running node js app in ECS - Fargate Service
 
