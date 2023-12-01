@@ -15,7 +15,7 @@ export class WebServerConstruct extends Construct {
     super(scope, id);
 
     const webServerImg = new DockerImageAsset(this, "web server image", {
-        directory: path.join(__dirname, '..', 'nodeServer')
+        directory: path.join(__dirname, 'nodeServer')
     })
 
     const fargateService = new ApplicationLoadBalancedFargateService(this, "web server", {
