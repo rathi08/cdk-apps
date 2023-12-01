@@ -15,7 +15,7 @@ export class WebServerConstruct extends Construct {
     super(scope, id);
 
     const webServerImg = new DockerImageAsset(this, "web server image", {
-        directory: path.join(__dirname, '..', 'container')
+        directory: path.join(__dirname, '..', 'nodeServer')
     })
 
     const fargateService = new ApplicationLoadBalancedFargateService(this, "web server", {
@@ -25,7 +25,7 @@ export class WebServerConstruct extends Construct {
         }
     })
 
-    new CfnOutput(this, 'CloudFrontURL', { exportName: "Server URL", value:  fargateService.loadBalancer.loadBalancerDnsName});
+    new CfnOutput(this, 'Server URL', { exportName: "Server URL", value:  fargateService.loadBalancer.loadBalancerDnsName});
     
   }
 }
