@@ -1,7 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 // import { S3Import } from './s3-import';
-// import { LambdaFnConstruct } from './lambda-construct';
+import { LambdaFnConstruct } from './lambda-construct';
 // import { StaticWebAppConstruct } from './static-web-app';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -15,8 +15,8 @@ export class CdkStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'CdkQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
-   // new LambdaFnConstruct(this, "LambdaFnConstruct", { fnName: "LambdaFn" });
-   // new StaticWebAppConstruct(this, "StaticWebAppConstruct")
-   // new S3Import(this, 'Import and Deploy', {id: 'myawsimportbucket'});
+    new LambdaFnConstruct(this, "LambdaFnConstruct", { fnName: "LambdaFn" });
+    // new StaticWebAppConstruct(this, "StaticWebAppConstruct")
+    // new S3Import(this, 'Import and Deploy', {id: 'myawsimportbucket'});
   }
 }
