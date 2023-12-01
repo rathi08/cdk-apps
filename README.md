@@ -19,5 +19,5 @@ Available Constructs under cdk-stack
 1. S3Import - To import the existing S3 & to deploy the assets
 2. StaticWebAppConstruct - Hosts s3 assets in cloudfront.
 3. LambdaFnConstruct - Simple Lambda with handler
-
+4. TestCodePipelineStack - For running deployment through pipeline
 
